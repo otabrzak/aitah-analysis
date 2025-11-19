@@ -1,5 +1,8 @@
-# Data too large for git
-data/
+# Ignore everything in the data folder...
+data/*
+
+# ...BUT do not ignore the .gitkeep file
+!data/.gitkeep
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
