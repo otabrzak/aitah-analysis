@@ -1,8 +1,9 @@
 # Ignore everything in the data folder...
 data/*
 
-# ...BUT do not ignore the .gitkeep file
+# ...BUT do not ignore the .gitkeep file or the sampled data
 !data/.gitkeep
+!data/samples/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
