@@ -73,9 +73,14 @@ for root, dirs, files in yearly_files:
 
             # Calculate the sample size (dividing by 2 cause we are sampling twice in the next for loop)
             current_sample_size =  total_sample_size / 597_967 * temporary_df.shape[0] / 2
+            print(f"current_sample_size.shape: {current_sample_size}")
 
-            for target in [0,1]:
-                current_sample = temporary_df[temporary_df["target"]==target].sample(n=int(current_sample_size), random_state=random_state)
+            for target in [0, 1]:
+                current_population = temporary_df[temporary_df["target"]==target]
+                current_population = current_population[current_population["selftext"]!="[deleted]"]
+                current_population = current_population[current_population["selftext"]!="[removed]"]
+
+                current_sample = current_population.sample(n=int(current_sample_size), random_state=random_state)
                 final_sample = pd.concat([final_sample, current_sample], ignore_index=True)
 
 print(f"final_sample.shape: {final_sample.shape}")
