@@ -1,5 +1,6 @@
 # Ignore everything in the data folder...
-data/*
+data/pushshift/*
+data/scrapes/*
 
 # ...BUT do not ignore the .gitkeep file or the sampled data
 !data/.gitkeep
