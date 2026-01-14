@@ -2,11 +2,14 @@
 # Data fetching
 Since the json dataset is currently too large to keep on GitHub, the `data` folder has to be downloaded from OneDrive and replaced manually.
 
+# Pre-made samples
+I have prepared a few clean and processed csv samples so minimal preprocessing is needed. They are in the folder `data/samples`. *Balanced* means the classes were undersampled to be equally distributed (50/50) and the sampled data was cleaned. *Preprocessed* means the data was only been cleaned and the original ratio between classes was left intact.
+
 # Creating a sample
-You can create a sample through the script `create_sample.py`. Currently, the sample size is set to 20 000. When creating a sample of a different size, the name of the resulting csv is changed accordingly (a sample of size 1 000 000 will have an address of "data\samples\sample_1000000.csv").
+You can create a sample yourself through the script `data_scripts/script_sample_from_yearly.py`. At the start of the script, there are adjustable parameters (*sample size*, *random state* and *balance* - the option to balance the sample).
 
 # Submission attributes
-Here are some of the most important attributes (as per the [PRAW documentation](https://praw.readthedocs.io/en/stable/code_overview/models/submission.html)).
+Here are some of the most important attributes in the original JSONs (as per the [PRAW documentation](https://praw.readthedocs.io/en/stable/code_overview/models/submission.html)).
 | Attribute | Description |
 | :--- | :--- |
 | `author` | Provides an instance of `Redditor`. |
