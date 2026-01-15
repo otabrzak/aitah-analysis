@@ -1,0 +1,45 @@
+{
+  "os":  "Windows-10-10.0.26100-SP0",
+  "python":  "CPython 3.11.5",
+  "startedAt":  "2026-01-14T18:39:48.577633Z",
+  "args":  [
+    "train",
+    "config.cfg",
+    "--output",
+    "./output",
+    "--paths.train",
+    "./train2.spacy",
+    "--paths.dev",
+    "./test2.spacy",
+    "--verbose"
+  ],
+  "program":  "-m spacy.__main__",
+  "email":  "nanakoshiroi@gmail.com",
+  "root":  "c:\\Users\\emado\\Desktop\\Nová složka",
+  "host":  "LAPTOP-5VGM35AD",
+  "executable":  "c:\\Users\\emado\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+  "cpu_count":  6,
+  "cpu_count_logical":  12,
+  "gpu":  "NVIDIA GeForce RTX 3050 Laptop GPU",
+  "gpu_count":  1,
+  "disk":  {
+    "/":  {
+      "total":  "510913409024",
+      "used":  "386616037376"
+    }
+  },
+  "memory":  {
+    "total":  "16487870464"
+  },
+  "gpu_nvidia":  [
+    {
+      "name":  "NVIDIA GeForce RTX 3050 Laptop GPU",
+      "memoryTotal":  "4294967296",
+      "cudaCores":  2048,
+      "architecture":  "Ampere",
+      "uuid":  "GPU-627032fe-da94-52d9-cd58-1b568b072726"
+    }
+  ],
+  "cudaVersion":  "11.6",
+  "writerId":  "73o13vbb8ezrxo7yvxgau4it0arng19b"
+}
