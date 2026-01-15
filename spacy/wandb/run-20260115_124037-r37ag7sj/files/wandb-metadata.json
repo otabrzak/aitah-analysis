@@ -1,0 +1,48 @@
+{
+  "os":  "Windows-10-10.0.26100-SP0",
+  "python":  "CPython 3.11.5",
+  "startedAt":  "2026-01-15T11:40:37.857544Z",
+  "args":  [
+    "train",
+    "config_small.cfg",
+    "--output",
+    "./output_small",
+    "--paths.train",
+    "./train_small.spacy",
+    "--paths.dev",
+    "./test_small.spacy"
+  ],
+  "program":  "-m spacy.__main__",
+  "git":  {
+    "remote":  "https://github.com/otabrzak/aitah-analysis.git",
+    "commit":  "e2a5b347fff5e174c0477cd7be08e4f7fb33c125"
+  },
+  "email":  "nanakoshiroi@gmail.com",
+  "root":  "c:\\Users\\emado\\Desktop\\škola\\semestr 5\\TA2\\aitah-analysis\\spacy",
+  "host":  "LAPTOP-5VGM35AD",
+  "executable":  "c:\\Users\\emado\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+  "cpu_count":  6,
+  "cpu_count_logical":  12,
+  "gpu":  "NVIDIA GeForce RTX 3050 Laptop GPU",
+  "gpu_count":  1,
+  "disk":  {
+    "/":  {
+      "total":  "510913409024",
+      "used":  "385849200640"
+    }
+  },
+  "memory":  {
+    "total":  "16487870464"
+  },
+  "gpu_nvidia":  [
+    {
+      "name":  "NVIDIA GeForce RTX 3050 Laptop GPU",
+      "memoryTotal":  "4294967296",
+      "cudaCores":  2048,
+      "architecture":  "Ampere",
+      "uuid":  "GPU-627032fe-da94-52d9-cd58-1b568b072726"
+    }
+  ],
+  "cudaVersion":  "11.6",
+  "writerId":  "wnum6xyh6eotls9qwvxb0wju4ou2jjub"
+}

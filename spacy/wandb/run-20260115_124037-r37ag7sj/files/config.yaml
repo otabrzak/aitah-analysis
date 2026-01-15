@@ -1,0 +1,210 @@
+_wandb:
+    value:
+        cli_version: 0.24.0
+        e:
+            wnum6xyh6eotls9qwvxb0wju4ou2jjub:
+                args:
+                    - train
+                    - config_small.cfg
+                    - --output
+                    - ./output_small
+                    - --paths.train
+                    - ./train_small.spacy
+                    - --paths.dev
+                    - ./test_small.spacy
+                cpu_count: 6
+                cpu_count_logical: 12
+                cudaVersion: "11.6"
+                disk:
+                    /:
+                        total: "510913409024"
+                        used: "385849200640"
+                email: nanakoshiroi@gmail.com
+                executable: c:\Users\emado\AppData\Local\Programs\Python\Python311\python.exe
+                git:
+                    commit: e2a5b347fff5e174c0477cd7be08e4f7fb33c125
+                    remote: https://github.com/otabrzak/aitah-analysis.git
+                gpu: NVIDIA GeForce RTX 3050 Laptop GPU
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Ampere
+                      cudaCores: 2048
+                      memoryTotal: "4294967296"
+                      name: NVIDIA GeForce RTX 3050 Laptop GPU
+                      uuid: GPU-627032fe-da94-52d9-cd58-1b568b072726
+                host: LAPTOP-5VGM35AD
+                memory:
+                    total: "16487870464"
+                os: Windows-10-10.0.26100-SP0
+                program: -m spacy.__main__
+                python: CPython 3.11.5
+                root: c:\Users\emado\Desktop\škola\semestr 5\TA2\aitah-analysis\spacy
+                startedAt: "2026-01-15T11:40:37.857544Z"
+                writerId: wnum6xyh6eotls9qwvxb0wju4ou2jjub
+        m: []
+        python_version: 3.11.5
+        t:
+            "1":
+                - 1
+                - 33
+            "2":
+                - 1
+                - 33
+            "3":
+                - 2
+                - 16
+            "4": 3.11.5
+            "5": 0.24.0
+            "8":
+                - 3
+            "10":
+                - 20
+            "12": 0.24.0
+            "13": windows-amd64
+components:
+    value:
+        textcat:
+            factory: textcat
+            model:
+                '@architectures': spacy.TextCatCNN.v2
+                exclusive_classes: true
+                "no": null
+                tok2vec:
+                    '@architectures': spacy.Tok2VecListener.v1
+                    upstream: '*'
+                    width: 256
+            scorer:
+                '@scorers': spacy.textcat_scorer.v2
+            threshold: 0
+        tok2vec:
+            factory: tok2vec
+            model:
+                '@architectures': spacy.Tok2Vec.v2
+                embed:
+                    '@architectures': spacy.MultiHashEmbed.v2
+                    attrs:
+                        - NORM
+                        - PREFIX
+                        - SUFFIX
+                        - SHAPE
+                    include_static_vectors: false
+                    rows:
+                        - 5000
+                        - 1000
+                        - 2500
+                        - 2500
+                    width: 256
+                encode:
+                    '@architectures': spacy.MaxoutWindowEncoder.v2
+                    depth: 8
+                    maxout_pieces: 3
+                    width: 256
+                    window_size: 1
+corpora:
+    value:
+        dev:
+            '@readers': spacy.Corpus.v1
+            augmenter: null
+            gold_preproc: false
+            limit: 0
+            max_length: 0
+        train:
+            '@readers': spacy.Corpus.v1
+            augmenter: null
+            gold_preproc: false
+            limit: 0
+            max_length: 0
+initialize:
+    value:
+        after_init: null
+        before_init: null
+        init_tok2vec: null
+        lookups: null
+        vectors: null
+        vocab_data: null
+nlp:
+    value:
+        after_creation: null
+        after_pipeline_creation: null
+        batch_size: 1000
+        before_creation: null
+        disabled: []
+        lang: en
+        pipeline:
+            - tok2vec
+            - textcat
+        tokenizer:
+            '@tokenizers': spacy.Tokenizer.v1
+        vectors:
+            '@vectors': spacy.Vectors.v1
+paths:
+    value:
+        init_tok2vec: null
+        vectors: null
+system:
+    value:
+        gpu_allocator: null
+        seed: 0
+training:
+    value:
+        accumulate_gradient: 1
+        annotating_components: []
+        batcher:
+            '@batchers': spacy.batch_by_words.v1
+            discard_oversize: true
+            get_length: null
+            size:
+                '@schedules': compounding.v1
+                compound: 1.001
+                start: 64
+                stop: 256
+                t: 0
+            tolerance: 0.2
+        before_to_disk: null
+        before_update: null
+        dev_corpus: corpora.dev
+        dropout: 0.1
+        eval_frequency: 200
+        frozen_components: []
+        gpu_allocator: null
+        logger:
+            '@loggers': spacy.WandbLogger.v5
+            entity: null
+            log_best_dir: null
+            log_custom_stats: null
+            log_dataset_dir: null
+            log_latest_dir: null
+            model_log_interval: null
+            project_name: AITAH_sentiment_training
+            remove_config_values:
+                - paths.train
+                - paths.dev
+                - corpora.train.path
+                - corpora.dev.path
+            run_name: null
+        max_epochs: 0
+        max_steps: 20000
+        optimizer:
+            '@optimizers': Adam.v1
+            beta1: 0.9
+            beta2: 0.999
+            eps: 1e-08
+            grad_clip: 1
+            l2: 0.01
+            l2_is_weight_decay: true
+            learn_rate: 0.001
+            use_averages: false
+        patience: 1600
+        score_weights:
+            cats_f_per_type: null
+            cats_macro_auc: null
+            cats_macro_f: null
+            cats_macro_p: null
+            cats_macro_r: null
+            cats_micro_f: null
+            cats_micro_p: null
+            cats_micro_r: null
+            cats_score: 1
+            cats_score_desc: null
+        seed: 0
+        train_corpus: corpora.train
